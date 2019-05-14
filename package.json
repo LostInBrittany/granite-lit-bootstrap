@@ -1,8 +1,8 @@
 {
   "name": "@granite-elements/granite-lit-bootstrap",
   "description": "Wrapping of *Bootstrap CSS* as a LitElement CSS TemplateResult to be used in LitElement web components",
-  "main": "granite-bootstrap-min.js",
-  "module": "granite-bootstrap-min.js",
+  "main": "granite-lit-bootstrap-min.js",
+  "module": "granite-lit-bootstrap-min.js",
   "author": "Horacio Gonzalez <horacio.gonzalez@gmail.com>",
   "license": "Apache 2.0",
   "repository": {
@@ -17,7 +17,7 @@
   "scripts": {
     "prepare": "node ./scripts/granite-css-modularizer.js ./node_modules/bootstrap/dist/css ."
   },
-  "version": "4.3.1-1",
+  "version": "4.3.1-2",
   "devDependencies": {
     "fs-extra": "^8.0.1",
     "klaw": "^3.0.0"
