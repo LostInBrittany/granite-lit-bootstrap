@@ -42,30 +42,19 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
       import './granite-bootstrap-example.js';
     </script>
 
-    <script type="module" src="../../../@polymer/iron-demo-helpers/demo-snippet.js"></script>
-    <script type="module" src="../../../@polymer/iron-demo-helpers/demo-pages-shared-styles.js"></script>
+    <script type="module">
+      import '@polymer/iron-demo-helpers/demo-pages-shared-styles';
+      import '@polymer/iron-demo-helpers/demo-snippet';
+    </script>
 
-    <style is="custom-style" include="demo-pages-shared-styles">
-      .spacer-10 {
-          width: 100%;
-          height: 10px;
-      }
-
-      .spacer-50 {
-          width: 100%;
-          height: 50px;
-      }
-
-      .vertical-section-container {
-          max-width: 550px;
-      }
-    </style>
+    <custom-style>
+      <style is="custom-style" include="demo-pages-shared-styles">
+      </style>
+    </custom-style>
   </head>
 
   <body>
-
     <div class="vertical-section-container centered">
-
       <h3>granite-boostrap</h3>
       <demo-snippet class="centered-demo">
         <template>
