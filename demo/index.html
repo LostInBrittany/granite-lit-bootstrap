@@ -21,7 +21,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     <script>
 
       // load webcomponents polyfills
-      (function () {
+      (function() {
           if ('registerElement' in document
                   && 'import' in document.createElement('link')
                   && 'content' in document.createElement('template')) {
@@ -41,6 +41,9 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     <script type="module">
       import './granite-bootstrap-example.js';
     </script>
+
+    <script type="module" src="../../../@polymer/iron-demo-helpers/demo-snippet.js"></script>
+    <script type="module" src="../../../@polymer/iron-demo-helpers/demo-pages-shared-styles.js"></script>
 
     <style is="custom-style" include="demo-pages-shared-styles">
       .spacer-10 {

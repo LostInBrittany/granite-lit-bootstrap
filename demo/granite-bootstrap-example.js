@@ -1,42 +1,40 @@
-import {html, PolymerElement} from '@polymer/polymer/polymer-element.js';
-import '@polymer/iron-icon/iron-icon.js';
-import '@polymer/iron-demo-helpers/demo-snippet.js';
-import '@polymer/iron-demo-helpers/demo-pages-shared-styles.js';
-import '@polymer/paper-styles/color.js';
-import '../granite-bootstrap.js';
+import { html, LitElement } from 'lit-element';
+import bootstrapStyle from '../granite-lit-bootstrap.js';
 
-class GraniteBootstrapExample extends PolymerElement {
-    static get template() {
-        return html`
-                <style include="granite-bootstrap"></style>
-                <table class="table  table-hover">
-                    <tr><th>Surname</th><th>Name</th></tr>
-                    <template is="dom-repeat" items="{{people}}" as="person">
-                      <tr>
-                        <td>{{person.lastname}}</td>
-                        <td>{{person.firstname}}</td>
-                      </tr>
-                    </template>
-                </table>`;
+class GraniteSpectreExample extends LitElement {
+    static get styles() {
+      return bootstrapStyle;
     }
+    render() {
+      return html`
+        <table class="table  table-hover">
+            <tr><th>Surname</th><th>Name</th></tr>
+            ${this.people.map( (person) => {
+              return html`
+              <tr>
+                <td>${person.lastname}</td>
+                <td>${person.firstname}</td>
+              </tr>
+              `;
+            })}
+        </table>
+      `;
+    }
+  
     static get properties() {
-        return {
-            people: {
-                type: Array,
-                value: function () {
-                    return [
-                        {firstname: "Jack", lastname: "Aubrey"},
-                        {firstname: "Anne", lastname: "Elliot"},
-                        {firstname: "Stephen", lastname: "Maturin"},
-                        {firstname: "Emma", lastname: "Woodhouse"}
-                    ]
-                }
-            }
-        };
+      return {
+        people: { type: Array },
+      };
     }
-
+  
     constructor() {
-        super();
+      super();
+      this.people = [
+        { firstname: 'Jack', lastname: 'Aubrey' },
+        { firstname: 'Anne', lastname: 'Elliot' },
+        { firstname: 'Stephen', lastname: 'Maturin' },
+        { firstname: 'Emma', lastname: 'Woodhouse' },
+      ];
     }
-}
-customElements.define('granite-bootstrap-example', GraniteBootstrapExample);
+  }
+  customElements.define('granite-bootstrap-example', GraniteSpectreExample);
