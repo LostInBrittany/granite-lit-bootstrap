@@ -11,19 +11,18 @@
   },
   "homepage": "https://github.com/lostinbrittany/granite-lit-bootstrap",
   "dependencies": {
-    "bootstrap": "4.5.0",
     "lit-element": "^2.3.0"
   },
   "scripts": {
-    "prepare": "node ./scripts/granite-css-modularizer.js ./node_modules/bootstrap/dist/css .",
+    "prepare": "node  ./node_modules/granite-lit-css-modularizer/granite-lit-css-modularizer.js ./node_modules/bootstrap/dist/css . bootstrapStyles",
     "serve": "npx es-dev-server --node-resolve --watch"
   },
-  "version": "4.5.0-1",
+  "version": "4.5.2-0",
   "devDependencies": {
     "@webcomponents/webcomponentsjs": "^2.4.4",
     "es-dev-server": "^1.56.1",
-    "fs-extra": "^9.0.0",
-    "klaw": "^3.0.0",
-    "minimist": "^1.2.5"
+    "granite-lit-css-modularizer": "^1.0.4",
+    "minimist": "^1.2.5",
+    "bootstrap": "4.5.2"
   }
 }

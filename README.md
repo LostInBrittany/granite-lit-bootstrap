@@ -30,7 +30,7 @@ Once installed, import it in your application. Usually you will simply want to i
 Supossing you want to import `granite-lit-bootstrap.js`:
  
 ```
-import bootstrapStyle from '@granite-elements/granite-lit-bootstrap/granite-lit-bootstrap.js';
+import {bootstrapStyles} from '@granite-elements/granite-lit-bootstrap/granite-lit-bootstrap.js';
 ``` 
 
 #### 3. Inside your component, use *granite-lit-bootstrap* in the static `styles` property
@@ -40,7 +40,7 @@ import bootstrapStyle from '@granite-elements/granite-lit-bootstrap/granite-lit-
 
 class GraniteSpectreExample extends LitElement {
   static get styles() {
-    return bootstrapStyle;
+    return [bootstrapStyles];
   }
   render() {
     return html`
@@ -54,11 +54,11 @@ class GraniteSpectreExample extends LitElement {
 
 ```js
 import { html, LitElement } from 'lit-element';
-import bootstrapStyle from '../granite-lit-bootstrap.js';
+import {bootstrapStyles} from '../granite-lit-bootstrap.js';
 
 class GraniteSpectreExample extends LitElement {
   static get styles() {
-    return bootstrapStyle;
+    return [bootstrapStyles];
   }
   render() {
     return html`
