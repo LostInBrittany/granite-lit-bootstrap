@@ -1,7 +1,7 @@
   
 /**
 @license Apache 2.0
-Copyright (c) 2020 Horacio "LostInBrittany" Gonzalez for the style module encapsulation of CSS files
+Copyright (c) 2021 Horacio "LostInBrittany" Gonzalez for the style module encapsulation of CSS files
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
 You may obtain a copy of the License at
@@ -14,13 +14,13 @@ limitations under the License.
 @demo demo/index.html
 */
 
-import { css } from 'lit-element';
+import { css } from 'lit';
 
 export const bootstrapStyles = css`
 /*!
- * Bootstrap Grid v4.5.2 (https://getbootstrap.com/)
- * Copyright 2011-2020 The Bootstrap Authors
- * Copyright 2011-2020 Twitter, Inc.
+ * Bootstrap Grid v4.6.0 (https://getbootstrap.com/)
+ * Copyright 2011-2021 The Bootstrap Authors
+ * Copyright 2011-2021 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 :host {
