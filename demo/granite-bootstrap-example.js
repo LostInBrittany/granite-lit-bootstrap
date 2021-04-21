@@ -1,4 +1,4 @@
-import { html, LitElement } from 'lit-element';
+import { html, LitElement } from 'lit';
 import {bootstrapStyles} from '../granite-lit-bootstrap.js';
 
 class GraniteSpectreExample extends LitElement {
